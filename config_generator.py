@@ -205,6 +205,10 @@ if options['inverter']['level'] >= 2:
     sensors.append({'name': "Total Reactive Power", 'sensor_type': "sensor",
     'register': "total_reactive_power", 'dev_class': "power",
     'state_class': "measurement"})
+    
+    sensors.append({'name': "Mppt1 Current", 'sensor_type': "sensor",
+    'register': "mppt_1_current", 'dev_class': "power",
+    'state_class': "measurement"})
   
 options['exports'][0]['ha_sensors']= sensors
 
