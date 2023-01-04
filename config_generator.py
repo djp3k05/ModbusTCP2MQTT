@@ -245,13 +245,13 @@ if options['inverter']['level'] >= 2:
     'register': "mppt_2_voltage", 'dev_class': "voltage",
     'state_class': "measurement"})
 	
-	sensors.append({'name': "Total Running time", 'sensor_type': "sensor",
-	'register': "total_running_time", 'dev_class': "time",
-	'state_class': "total_increasing"})
+    sensors.append({'name': "Total Running time", 'sensor_type': "sensor",
+    'register': "total_running_time", 'dev_class': "time",
+    'state_class': "total_increasing"})
 	
-	sensors.append({'name': "Daily Running time", 'sensor_type': "sensor",
-	'register': "daily_running_time", 'dev_class': "time",
-	'state_class': "total_increasing"})	
+    sensors.append({'name': "Daily Running time", 'sensor_type': "sensor",
+    'register': "daily_running_time", 'dev_class': "time",
+    'state_class': "total_increasing"})	
     
 options['exports'][0]['ha_sensors']= sensors
 
