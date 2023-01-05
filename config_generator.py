@@ -89,7 +89,7 @@ sensors.append({'name': "Power State", 'sensor_type': "binary_sensor",
 
 sensors.append({'name': "Daily Generation", 'sensor_type': "sensor",
 'register': "daily_power_yields", 'dev_class': "energy",
-'state_class': "total_increasing"})
+'state_class': "measurement"})
 
 sensors.append({'name': "Total Generation", 'sensor_type': "sensor",
 'register': "total_power_yields", 'dev_class': "energy",
@@ -251,7 +251,7 @@ if options['inverter']['level'] >= 2:
 	
     sensors.append({'name': "Daily Running time", 'sensor_type': "sensor",
     'register': "daily_running_time", 'dev_class': "time",
-    'state_class': "total_increasing"})	
+    'state_class': "measurement"})	
     
 options['exports'][0]['ha_sensors']= sensors
 
