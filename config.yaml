@@ -31,6 +31,6 @@ schema:
   Smart_meter: bool
   Connection: "list(Sungrow|Modbus|HTTP)"
   Scan_level: "list(BASIC|STANDARD|DETAIL|ALL)"
-  Scan_interval: int(10,600)
+  Scan_interval: int(3,600)
   Scan_timeout: int(3,60)
   Log_level: "list(INFO|WARNING|ERROR|DEBUG)"
