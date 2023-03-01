@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.3.8.5
+## 0.3.8.6
 - Inverter Work state - keep history state.
 ## 0.3.8.4
 - Changed minimal scan interval value to 3 secconds.
