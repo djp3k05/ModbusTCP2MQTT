@@ -221,11 +221,11 @@ if options['inverter']['level'] >= 2:
     'register': "grid_frequency", 'dev_class': "power",
     'state_class': "measurement"})
 
-    sensors.append({'name': "Work State", 'sensor_type': "binary_sensor",
+    sensors.append({'name': "Work State", 'sensor_type': "sensor",
     'register': "work_state_1", 'dev_class': "power",
     'state_class': "measurement"})
 	
-    sensors.append({'name': "Work State 2", 'sensor_type': "binary_sensor",
+    sensors.append({'name': "Work State 2", 'sensor_type': "sensor",
     'register': "work_state_2", 'dev_class': "running"})
 	
     sensors.append({'name': "Alarm Code", 'sensor_type': "sensor",
