@@ -222,8 +222,7 @@ if options['inverter']['level'] >= 2:
     'state_class': "measurement"})
 
     sensors.append({'name': "Work state", 'sensor_type': "sensor",
-    'register': "work_state_1", 'dev_class': "power",
-    'state_class': "measurement"})	
+    'register': "work_state_1"})	
 	
     sensors.append({'name': "Alarm Code", 'sensor_type': "sensor",
     'register': "alarm_code_1", 'dev_class': "power",
