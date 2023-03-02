@@ -110,14 +110,6 @@ if int(options['inverter']['level']) >= 1:
     'register': "total_dc_power", 'dev_class': "power",
     'state_class': "measurement"})
     
-    sensors.append({'name': "Load Power Hybrid", 'sensor_type': "sensor",
-    'register': "load_power_hybrid", 'dev_class': "power",
-    'state_class': "measurement"})
-    
-    sensors.append({'name': "Export Power Hybrid", 'sensor_type': "sensor",
-    'register': "export_power_hybrid", 'dev_class': "power",
-    'state_class': "measurement"})
-    
     sensors.append({'name': "Load Power", 'sensor_type': "sensor",
     'register': "load_power", 'dev_class': "power",
     'state_class': "measurement"})
@@ -201,10 +193,6 @@ if options['inverter']['level'] >= 2:
     'register': "internal_temperature", 'dev_class': "temperature",
     'state_class': "measurement"})
     
-    sensors.append({'name': "Battery Temperature", 'sensor_type': "sensor",
-    'register': "battery_temperature", 'dev_class': "temperature",
-    'state_class': "measurement"})
-    
     sensors.append({'name': "Total Active Power", 'sensor_type': "sensor",
     'register': "total_active_power", 'dev_class': "power",
     'state_class': "measurement"})
@@ -223,15 +211,9 @@ if options['inverter']['level'] >= 2:
 
     sensors.append({'name': "Work State", 'sensor_type': "sensor",
     'register': "work_state_1"})
-
-#not working
-#    sensors.append({'name': "Work State BS", 'sensor_type': "binary_sensor",
-#    'register': "work_state_1",'dev_class': "running",
-#    'payload_on': "ON",'payload_off': "OFF"})
 	
     sensors.append({'name': "Work State 2", 'sensor_type': "sensor",
-    'register': "work_state_2", 'dev_class': "power",
-    'state_class': "measurement"})
+    'register': "work_state_2"})
 	
     sensors.append({'name': "Alarm Code", 'sensor_type': "sensor",
     'register': "alarm_code_1", 'dev_class': "power",
