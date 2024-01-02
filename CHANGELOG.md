@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.3.8.19
+## 0.3.8.20
 - Modified cryptodomex to ~= from == GRL
 ## 0.3.8.6
 - Inverter Work state - keep history state.
