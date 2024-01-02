@@ -10,7 +10,7 @@ ARG BUILD_ARCH
 COPY requirements.txt ./
 # RUN apk add --no-cache python3-dev py3-pip g++
 RUN apk add --no-cache --virtual .buildtools make gcc g++ python3 linux-headers git npm py3-pip
-RUN pip install --upgrade pycryptodomex --no-cache-dir -r requirements.txt
+# RUN pip install --upgrade pycryptodomex~=3.11.0 --no-cache-dir -r requirements.txt
 # Modified cryptodomex to ~= from == GRL
 
 COPY SunGather/ /
