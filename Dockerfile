@@ -10,7 +10,6 @@ ARG BUILD_ARCH
 COPY requirements.txt ./
 # RUN apk add --no-cache python3-dev py3-pip g++
 RUN apk add --no-cache --virtual .buildtools make gcc g++ python3-dev linux-headers git npm py3-pip
-RUN pip install --upgrade pip
 RUN pip install wheel
 RUN pip install tzdata
 RUN pip install maturin
