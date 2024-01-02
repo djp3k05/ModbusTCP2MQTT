@@ -10,18 +10,7 @@ ARG BUILD_ARCH
 COPY requirements.txt ./
 # RUN apk add --no-cache python3-dev py3-pip g++
 RUN apk add --no-cache --virtual .buildtools make gcc g++ python3-dev linux-headers git npm py3-pip
-RUN pip install wheel
-RUN pip install tzdata
-RUN pip install maturin
-# RUN pip install --upgrade pycryptodomex~=3.11.0
-# RUN pip install --upgrade PyYAML==5.3.1
-RUN pip install --upgrade requests>=2.26.0
-RUN pip install --upgrade paho-mqtt==1.5.1
-RUN pip install --upgrade pymodbus==2.5.3
-RUN pip install --upgrade SungrowModbusTcpClient==0.1.6
-RUN pip install --upgrade SungrowModbusWebClient==0.3.2
-RUN pip install --upgrade readsettings==3.4.5
-# RUN pip install --upgrade pycryptodomex==3.11.0 --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pycryptodomex~=3.11.0 --no-cache-dir -r requirements.txt
 # Modified cryptodomex to ~= from == GRL
 
 COPY SunGather/ /
