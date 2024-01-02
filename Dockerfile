@@ -11,7 +11,7 @@ COPY requirements.txt ./
 RUN apk add --no-cache python3-dev py3-pip g++
 # RUN pip install --upgrade pycryptodomex~=3.11.0
 # RUN pip install --upgrade PyYAML==5.3.1
-RUN pip install --upgrade requests==2.26.0
+RUN pip install --upgrade requests>=2.26.0
 RUN pip install --upgrade paho-mqtt==1.5.1
 RUN pip install --upgrade pymodbus==2.5.3
 RUN pip install --upgrade SungrowModbusTcpClient==0.1.6
