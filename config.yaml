@@ -1,5 +1,5 @@
 name: ModbusTCP2MQTT
-version: "0.3.8.19"
+version: "0.3.8.20"
 slug: modbus_inverter
 description: Sungrow/SMA inverter Modbus communication
 url: "https://github.com/djp3k05/ModbusTCP2MQTT
