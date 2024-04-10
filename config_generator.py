@@ -95,10 +95,6 @@ sensors.append({'name': "Total Generation", 'sensor_type': "sensor",
 'register': "total_power_yields", 'dev_class': "energy",
 'state_class': "total_increasing"})
 
-sensors.append({'name': "Active Power", 'sensor_type': "sensor",
-'register': "total_active_power", 'dev_class': "power",
-'state_class': "measurement"})
-
 sensors.append({'name': "Total Apparent Power", 'sensor_type': "sensor",
 'register': "total_apparent_power", 'dev_class': "power",
 'state_class': "measurement"})
@@ -254,6 +250,9 @@ if options['inverter']['level'] >= 2:
     sensors.append({'name': "Mppt2 Voltage", 'sensor_type': "sensor",
     'register': "mppt_2_voltage", 'dev_class': "voltage",
     'state_class': "measurement"})
+
+    sensors.append({'name': "Work State 2", 'sensor_type': "sensor",
+    'register': "work_state_2"})
 
 options['exports'][0]['ha_sensors']= sensors
 
