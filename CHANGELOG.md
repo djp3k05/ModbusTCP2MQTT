@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.3.8.36
+- SG60RS - update registry
 ## 0.3.8.33
 - fix for HA 2024.4.x
 ## 0.3.8.6
