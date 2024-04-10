@@ -187,54 +187,54 @@ if int(options['inverter']['level']) >= 1:
         'register': "export_to_grid", 'dev_class': "power",
         'state_class': "measurement"})
 
+	sensors.append({'name': "Temperature", 'sensor_type': "sensor",
+    	'register': "internal_temperature", 'dev_class': "temperature",
+    	'state_class': "measurement"})
+    
+    	sensors.append({'name': "Total Active Power", 'sensor_type': "sensor",
+    	'register': "total_active_power", 'dev_class': "power",
+    	'state_class': "measurement"})
+    
+    	sensors.append({'name': "Total Reactive Power", 'sensor_type': "sensor",
+   	 'register': "total_reactive_power", 'dev_class': "power",
+   	 'state_class': "measurement"})
+ 
+   	 sensors.append({'name': "Power Factor", 'sensor_type': "sensor",
+    	'register': "power_factor", 'dev_class': "power",
+   	 'state_class': "measurement"})
+
+   	 sensors.append({'name': "Grid Frequency", 'sensor_type': "sensor",
+   	 'register': "grid_frequency", 'dev_class': "power",
+   	 'state_class': "measurement"})
+
+    	sensors.append({'name': "Work State", 'sensor_type': "sensor",
+    	'register': "work_state_1"})
+	
+    	sensors.append({'name': "Work State 2", 'sensor_type': "sensor",
+    	'register': "work_state_2"})
+	
+   	 sensors.append({'name': "Alarm Code", 'sensor_type': "sensor",
+    	'register': "alarm_code_1", 'dev_class': "power",
+    	'state_class': "measurement"})		
+	
+    	sensors.append({'name': "Mppt1 Current", 'sensor_type': "sensor",
+    	'register': "mppt_1_current", 'dev_class': "current",
+    	'state_class': "measurement"})
+    
+    	sensors.append({'name': "Mppt2 Current", 'sensor_type': "sensor",
+    	'register': "mppt_2_current", 'dev_class': "current",
+    	'state_class': "measurement"})
+
+    	sensors.append({'name': "Mppt1 Voltage", 'sensor_type': "sensor",
+    	'register': "mppt_1_voltage", 'dev_class': "voltage",
+    	'state_class': "measurement"})
+    
+    	sensors.append({'name': "Mppt2 Voltage", 'sensor_type': "sensor",
+   	'register': "mppt_2_voltage", 'dev_class': "voltage",
+   	'state_class': "measurement"})
+
 #Detail Level
 if options['inverter']['level'] >= 2:
-    sensors.append({'name': "Temperature", 'sensor_type': "sensor",
-    'register': "internal_temperature", 'dev_class': "temperature",
-    'state_class': "measurement"})
-    
-    sensors.append({'name': "Total Active Power", 'sensor_type': "sensor",
-    'register': "total_active_power", 'dev_class': "power",
-    'state_class': "measurement"})
-    
-    sensors.append({'name': "Total Reactive Power", 'sensor_type': "sensor",
-    'register': "total_reactive_power", 'dev_class': "power",
-    'state_class': "measurement"})
- 
-    sensors.append({'name': "Power Factor", 'sensor_type': "sensor",
-    'register': "power_factor", 'dev_class': "power",
-    'state_class': "measurement"})
-
-    sensors.append({'name': "Grid Frequency", 'sensor_type': "sensor",
-    'register': "grid_frequency", 'dev_class': "power",
-    'state_class': "measurement"})
-
-    sensors.append({'name': "Work State", 'sensor_type': "sensor",
-    'register': "work_state_1"})
-	
-    sensors.append({'name': "Work State 2", 'sensor_type': "sensor",
-    'register': "work_state_2"})
-	
-    sensors.append({'name': "Alarm Code", 'sensor_type': "sensor",
-    'register': "alarm_code_1", 'dev_class': "power",
-    'state_class': "measurement"})		
-	
-    sensors.append({'name': "Mppt1 Current", 'sensor_type': "sensor",
-    'register': "mppt_1_current", 'dev_class': "current",
-    'state_class': "measurement"})
-    
-    sensors.append({'name': "Mppt2 Current", 'sensor_type': "sensor",
-    'register': "mppt_2_current", 'dev_class': "current",
-    'state_class': "measurement"})
-
-    sensors.append({'name': "Mppt1 Voltage", 'sensor_type': "sensor",
-    'register': "mppt_1_voltage", 'dev_class': "voltage",
-    'state_class': "measurement"})
-    
-    sensors.append({'name': "Mppt2 Voltage", 'sensor_type': "sensor",
-    'register': "mppt_2_voltage", 'dev_class': "voltage",
-    'state_class': "measurement"})
-	
     sensors.append({'name': "Total Running time", 'sensor_type': "sensor",
     'register': "total_running_time", 'dev_class': "time",
     'state_class': "total_increasing"})
