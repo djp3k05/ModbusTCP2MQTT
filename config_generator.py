@@ -161,14 +161,14 @@ if int(options['inverter']['level']) >= 1:
     sensors.append({'name': "Total Reactive Power", 'sensor_type': "sensor",
     'register': "total_reactive_power", 'dev_class': "power",
     'state_class': "measurement"})
- 
-   	sensors.append({'name': "Power Factor", 'sensor_type': "sensor",
-    'register': "power_factor", 'dev_class': "power",
-   	'state_class': "measurement"})
 
-   	sensors.append({'name': "Grid Frequency", 'sensor_type': "sensor",
-   	'register': "grid_frequency", 'dev_class': "power",
-   	'state_class': "measurement"})
+    sensors.append({'name': "Power Factor", 'sensor_type': "sensor",
+    'register': "power_factor", 'dev_class': "power",
+    'state_class': "measurement"})
+
+    sensors.append({'name': "Grid Frequency", 'sensor_type': "sensor",
+    'register': "grid_frequency", 'dev_class': "power",
+    'state_class': "measurement"})
 
     sensors.append({'name': "Work State", 'sensor_type': "sensor",
     'register': "work_state_1"})
@@ -176,7 +176,7 @@ if int(options['inverter']['level']) >= 1:
     sensors.append({'name': "Work State 2", 'sensor_type': "sensor",
     'register': "work_state_2"})
 	
-   	sensors.append({'name': "Alarm Code", 'sensor_type': "sensor",
+    sensors.append({'name': "Alarm Code", 'sensor_type': "sensor",
     'register': "alarm_code_1", 'dev_class': "power",
     'state_class': "measurement"})		
 	
@@ -193,12 +193,12 @@ if int(options['inverter']['level']) >= 1:
     'state_class': "measurement"})
     
     sensors.append({'name': "Mppt2 Voltage", 'sensor_type': "sensor",
-   	'register': "mppt_2_voltage", 'dev_class': "voltage",
-   	'state_class': "measurement"})
+    'register': "mppt_2_voltage", 'dev_class': "voltage",
+    'state_class': "measurement"})
 
-	sensors.append({'name': "Temperature", 'sensor_type': "sensor",
-	'register': "internal_temperature", 'dev_class': "temperature",
-	'state_class': "measurement"})	
+    sensors.append({'name': "Temperature", 'sensor_type': "sensor",
+    'register': "internal_temperature", 'dev_class': "temperature",
+    'state_class': "measurement"})	
 
     if options['inverter']['smart_meter'] == True:
         sensors.append({'name': "Meter Power", 'sensor_type': "sensor",
