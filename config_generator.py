@@ -196,16 +196,16 @@ if int(options['inverter']['level']) >= 1:
     	'state_class': "measurement"})
     
     	sensors.append({'name': "Total Reactive Power", 'sensor_type': "sensor",
-   	 'register': "total_reactive_power", 'dev_class': "power",
-   	 'state_class': "measurement"})
+        'register': "total_reactive_power", 'dev_class': "power",
+   	'state_class': "measurement"})
  
-   	 sensors.append({'name': "Power Factor", 'sensor_type': "sensor",
+   	sensors.append({'name': "Power Factor", 'sensor_type': "sensor",
     	'register': "power_factor", 'dev_class': "power",
-   	 'state_class': "measurement"})
+   	'state_class': "measurement"})
 
-   	 sensors.append({'name': "Grid Frequency", 'sensor_type': "sensor",
-   	 'register': "grid_frequency", 'dev_class': "power",
-   	 'state_class': "measurement"})
+   	sensors.append({'name': "Grid Frequency", 'sensor_type': "sensor",
+   	'register': "grid_frequency", 'dev_class': "power",
+   	'state_class': "measurement"})
 
     	sensors.append({'name': "Work State", 'sensor_type': "sensor",
     	'register': "work_state_1"})
@@ -213,7 +213,7 @@ if int(options['inverter']['level']) >= 1:
     	sensors.append({'name': "Work State 2", 'sensor_type': "sensor",
     	'register': "work_state_2"})
 	
-   	 sensors.append({'name': "Alarm Code", 'sensor_type': "sensor",
+   	sensors.append({'name': "Alarm Code", 'sensor_type': "sensor",
     	'register': "alarm_code_1", 'dev_class': "power",
     	'state_class': "measurement"})		
 	
