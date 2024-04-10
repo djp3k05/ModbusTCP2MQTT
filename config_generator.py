@@ -81,7 +81,7 @@ for current_argument, current_value in arguments:
 options['exports'][0]['name'] = "mqtt" 
 options['exports'][0]['enabled'] = True
 options['exports'][0]['homeassistant']= True
-    
+
 #Basic Level sensor
 sensors.append({'name': "Power State", 'sensor_type': "binary_sensor",
 'register': "run_state",'dev_class': "running",
@@ -113,15 +113,15 @@ if int(options['inverter']['level']) >= 1:
     sensors.append({'name': "Total DC Power", 'sensor_type': "sensor",
     'register': "total_dc_power", 'dev_class': "power",
     'state_class': "measurement"})
-    
+
     sensors.append({'name': "Load Power Hybrid", 'sensor_type': "sensor",
     'register': "load_power_hybrid", 'dev_class': "power",
     'state_class': "measurement"})
-    
+
     sensors.append({'name': "Export Power Hybrid", 'sensor_type': "sensor",
     'register': "export_power_hybrid", 'dev_class': "power",
     'state_class': "measurement"})
-    
+
     sensors.append({'name': "Load Power", 'sensor_type': "sensor",
     'register': "load_power", 'dev_class': "power",
     'state_class': "measurement"})
@@ -172,7 +172,15 @@ if int(options['inverter']['level']) >= 1:
 
     sensors.append({'name': "Work state", 'sensor_type': "sensor",
     'register': "work_state_1", 'dev_class': "power",
-    'state_class': "measurement"})	
+    'state_class': "measurement"})
+
+    sensors.append({'name': "Total Running time", 'sensor_type': "sensor",
+    'register': "total_running_time", 'dev_class': "time",
+    'state_class': "total_increasing"})
+
+    sensors.append({'name': "Daily Running time", 'sensor_type': "sensor",
+    'register': "daily_running_time", 'dev_class': "time",
+    'state_class': "measurement"})
 
     if options['inverter']['smart_meter'] == True:
         sensors.append({'name': "Meter Power", 'sensor_type': "sensor",
@@ -202,7 +210,7 @@ if int(options['inverter']['level']) >= 1:
         sensors.append({'name': "Import from Grid", 'sensor_type': "sensor",
         'register': "import_from_grid", 'dev_class': "power",
         'state_class': "measurement"})
-
+  	
         sensors.append({'name': "Export to Grid", 'sensor_type': "sensor",
         'register': "export_to_grid", 'dev_class': "power",
         'state_class': "measurement"})
@@ -210,15 +218,15 @@ if int(options['inverter']['level']) >= 1:
 #Detail Level
 if options['inverter']['level'] >= 2:
 
-    
+
     sensors.append({'name': "Battery Temperature", 'sensor_type': "sensor",
     'register': "battery_temperature", 'dev_class': "temperature",
     'state_class': "measurement"})
-    
+
     sensors.append({'name': "Total Reactive Power", 'sensor_type': "sensor",
     'register': "total_reactive_power", 'dev_class': "power",
     'state_class': "measurement"})
- 
+
     sensors.append({'name': "Power Factor", 'sensor_type': "sensor",
     'register': "power_factor", 'dev_class': "power",
     'state_class': "measurement"})
@@ -227,16 +235,14 @@ if options['inverter']['level'] >= 2:
     'register': "grid_frequency", 'dev_class': "power",
     'state_class': "measurement"})
 
-	
-	
     sensors.append({'name': "Alarm Code", 'sensor_type': "sensor",
     'register': "alarm_code_1", 'dev_class': "power",
     'state_class': "measurement"})		
-	
+
     sensors.append({'name': "Mppt1 Current", 'sensor_type': "sensor",
     'register': "mppt_1_current", 'dev_class': "current",
     'state_class': "measurement"})
-    
+
     sensors.append({'name': "Mppt2 Current", 'sensor_type': "sensor",
     'register': "mppt_2_current", 'dev_class': "current",
     'state_class': "measurement"})
@@ -244,19 +250,11 @@ if options['inverter']['level'] >= 2:
     sensors.append({'name': "Mppt1 Voltage", 'sensor_type': "sensor",
     'register': "mppt_1_voltage", 'dev_class': "voltage",
     'state_class': "measurement"})
-    
+
     sensors.append({'name': "Mppt2 Voltage", 'sensor_type': "sensor",
     'register': "mppt_2_voltage", 'dev_class': "voltage",
     'state_class': "measurement"})
-	
-    sensors.append({'name': "Total Running time", 'sensor_type': "sensor",
-    'register': "total_running_time", 'dev_class': "time",
-    'state_class': "total_increasing"})
-	
-    sensors.append({'name': "Daily Running time", 'sensor_type': "sensor",
-    'register': "daily_running_time", 'dev_class': "time",
-    'state_class': "measurement"})	
-    
+
 options['exports'][0]['ha_sensors']= sensors
 
 with open('config.sg', 'w') as yaml_file:
