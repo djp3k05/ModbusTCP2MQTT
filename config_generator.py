@@ -187,10 +187,6 @@ if int(options['inverter']['level']) >= 1:
         'register': "export_to_grid", 'dev_class': "power",
         'state_class': "measurement"})
 
-	sensors.append({'name': "Temperature", 'sensor_type': "sensor",
-    	'register': "internal_temperature", 'dev_class': "temperature",
-    	'state_class': "measurement"})
-    
     	sensors.append({'name': "Total Active Power", 'sensor_type': "sensor",
     	'register': "total_active_power", 'dev_class': "power",
     	'state_class': "measurement"})
@@ -232,6 +228,10 @@ if int(options['inverter']['level']) >= 1:
     	sensors.append({'name': "Mppt2 Voltage", 'sensor_type': "sensor",
    	'register': "mppt_2_voltage", 'dev_class': "voltage",
    	'state_class': "measurement"})
+
+        sensors.append({'name': "Temperature", 'sensor_type': "sensor",
+        'register': "internal_temperature", 'dev_class': "temperature",
+        'state_class': "measurement"})
 
 #Detail Level
 if options['inverter']['level'] >= 2:
