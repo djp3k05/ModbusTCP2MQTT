@@ -166,9 +166,8 @@ if int(options['inverter']['level']) >= 1:
     'register': "internal_temperature", 'dev_class': "temperature",
     'state_class': "measurement"})
 
-    sensors.append({'name': "Work state", 'sensor_type': "sensor",
-    'register': "work_state_1", 'dev_class': "power",
-    'state_class': "measurement"})
+    sensors.append({'name': "Work State", 'sensor_type': "sensor",
+    'register': "work_state_1"})
 
     sensors.append({'name': "Total Running time", 'sensor_type': "sensor",
     'register': "total_running_time", 'dev_class': "time",
