@@ -230,7 +230,7 @@ if options['inverter']['level'] >= 2:
     'register': "grid_frequency", 'dev_class': "power",
     'state_class': "measurement"})
 
-    sensors.append({'name': Alarm Code", 'sensor_type': "sensor",
+    sensors.append({'name': "Alarm Code", 'sensor_type': "sensor",
     'register': "alarm_code_1"})
 
     sensors.append({'name': "Mppt1 Current", 'sensor_type': "sensor",
